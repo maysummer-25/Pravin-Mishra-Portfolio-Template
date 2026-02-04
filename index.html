@@ -600,15 +600,21 @@
 
       <!-- Bottom -->
       <div class="footer-bottom">
+
         <p>© <span id="year"></span> Pravin Mishra. All rights reserved.</p>
         <p>Crafted with <span>cloud</span> excellence by Pravin Mishra</p>
-        <p>Pravin Mishra Portfolio v1.0 — Deployed on 04-02-2026 — By Mmesoma Chukwumezie</p>
+        <p>Pravin Mishra Portfolio v1.0 — Deployed on <span id="deployDate">04-02-2026</span> — By Mmesoma Chukwumezie <span style="color: green;">● Live</span></p>
       </div>
 
     </div>
   </footer>
 
-
+<script>
+  const months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+  const now = new Date();
+  const dateStr = now.getDate().toString().padStart(2,'0') + ' ' + months[now.getMonth()] + ' ' + now.getFullYear();
+  document.getElementById('deployDate').textContent = dateStr;
+</script>
 
 </body>
 

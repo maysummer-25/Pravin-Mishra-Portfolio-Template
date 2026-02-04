@@ -39,4 +39,40 @@ Add this line (example):
 <p><strong>Deployed by:</strong> DMI Cohort 2 | Rahul Sharma | Group 4 | Week 1 | 16-01-2026</p>
 ```
 
+## Footer Implementation
+
+### Requirement
+The portfolio footer displays:
+- Version number (v1.0)
+- Deploy date (automatically generated)
+- Author name
+
+### How the Deploy Date is Generated
+
+The deploy date is dynamically generated using JavaScript when the page loads.
+
+**Implementation:**
+- Added a `<span id="deployDate"></span>` element in the footer
+- JavaScript automatically populates it with today's date in "DD Mon YYYY" format
+- Format example: "05 Feb 2026"
+
+### Code Snippet
+
+**HTML (footer section):**
+```html
+<footer>
+  <p>Pravin Mishra Portfolio v1.0 — Deployed on <span id="deployDate">04-02-2026</span> — By Mmesoma Chukwumezie 
+     <span style="color: green;">● Live</span>
+  </p>
+</footer>
+```
+
+**JavaScript:**
+```javascript
+const months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+const now = new Date();
+const dateStr = now.getDate().toString().padStart(2,'0') + ' ' + months[now.getMonth()] + ' ' + now.getFullYear();
+document.getElementById('deployDate').textContent = dateStr;
+```
+
 ✅ This proof must be visible in your browser screenshot submission.
