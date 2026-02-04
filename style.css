@@ -1039,7 +1039,16 @@ section {
 .footer {
   background: #000;
   color: #fff;
-  padding: 80px 20px 40px;
+  padding: 20px 30px;
+}
+
+.footer p {
+  margin: 0;
+}
+
+.live-indicator {
+  color: #2ecc71;
+  margin-left: 10px;
 }
 
 .footer-container {
